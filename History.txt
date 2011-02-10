@@ -1,0 +1,13 @@
+=== 0.1.1 / 2010-06-03
+
+* starting point
+
+=== 0.1.2 / 2010-06-03
+
+* Fixed spelling
+
+=== 0.1.3 / 2010-06-04
+
+* Fixed homepage URL
+
+
