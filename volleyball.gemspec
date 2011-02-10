@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{volleyball}
-  s.version = "2.0.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Coyne"]
@@ -23,7 +23,8 @@ Gem::Specification.new do |s|
     "lib/volleyball.rb",
     "lib/volleyball/railtie.rb",
     "lib/volleyball/volleyball.rb",
-    "test/test_volleyball.rb"
+    "test/test_volleyball.rb",
+    "volleyball.gemspec"
   ]
   s.homepage = %q{https://github.com/uzzz/volleyball}
   s.require_paths = ["lib"]
