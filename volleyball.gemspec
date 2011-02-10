@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{https://github.com/uzzz/volleyball}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
-  s.summary = nil
+  s.summary = %q{Voting mechanism to AR models}
   s.test_files = [
     "test/test_volleyball.rb"
   ]
@@ -39,12 +39,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<statistics>, [">= 0"])
+      s.add_runtime_dependency(%q<statistics2>, [">= 0"])
     else
-      s.add_dependency(%q<statistics>, [">= 0"])
+      s.add_dependency(%q<statistics2>, [">= 0"])
     end
   else
-    s.add_dependency(%q<statistics>, [">= 0"])
+    s.add_dependency(%q<statistics2>, [">= 0"])
   end
 end
 
