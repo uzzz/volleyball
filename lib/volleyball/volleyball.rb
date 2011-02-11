@@ -5,24 +5,24 @@ module Volleyball
   module Base
     def self.included(base)
       base.extend ClassMethods
-      base.send(:include, InstanceMethods)
     end
     
     module ClassMethods
-      def votable (args={})
+      def votable(args={})
         has_many :votes, :as => :subject
         before_save :calculate_score
         cattr_accessor :yes_adjustment
         cattr_accessor :no_adjustment
-        self.yes_adjustment = args[:yes_start] ? args[:yes_start] : 0
-        self.no_adjustment = args[:no_start] ? args[:no_start] : 0
-        
+        self.yes_adjustment = args[:yes_start] || 0
+        self.no_adjustment = args[:no_start] || 0
+
+        include InstanceMethods
       end
     end
     
     module InstanceMethods
       def calculate_score
-        self.score = (rank * 100).floor.to_f/10
+        self.score = (rank * 100).floor.to_f / 10
       end
 
       def rank 
