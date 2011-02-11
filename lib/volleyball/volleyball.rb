@@ -9,14 +9,16 @@ module Volleyball
     
     module ClassMethods
       def votable(args={})
-        has_many :votes, :as => :subject
-        before_save :calculate_score
-        cattr_accessor :yes_adjustment
-        cattr_accessor :no_adjustment
-        self.yes_adjustment = args[:yes_start] || 0
-        self.no_adjustment = args[:no_start] || 0
+        class_eval do
+          has_many :votes, :as => :subject
+          before_save :calculate_score
+          cattr_accessor :yes_adjustment
+          cattr_accessor :no_adjustment
+          self.yes_adjustment = args[:yes_start] || 0
+          self.no_adjustment = args[:no_start] || 0
 
-        include InstanceMethods
+          include InstanceMethods
+        end
       end
     end
     
